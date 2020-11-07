@@ -8,4 +8,4 @@ halt:
 	docker-compose stop
 
 ssh:
-	docker exec -ti project_php_1 sh
+	docker exec -ti project-api_php_1 sh
