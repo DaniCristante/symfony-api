@@ -1,3 +1,3 @@
-index:
-   path: /api/basic
-   controller: App\Controller\BasicController::test
+_api:
+  resource: routing/api.yaml
+  prefix: /v1
