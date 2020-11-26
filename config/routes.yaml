@@ -1,3 +1,7 @@
+home:
+  path: /
+  controller: App\Controller\HomeController:index
+
 _api:
   resource: routing/api.yaml
   prefix: /v1
