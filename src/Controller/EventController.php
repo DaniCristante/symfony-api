@@ -22,4 +22,9 @@ class EventController extends AbstractController
         $event = $this->eventRepository->getEventById($id);
         return $this->json($event);
     }
+
+    public function getEvents(): Response
+    {
+        
+    }
 }
