@@ -1,7 +1,7 @@
 get_event:
-  path: /event/{id}
+  path: /event
   controller: App\Controller\EventController::getEvent
-  methods: [GET]
+  methods: [POST]
   
 get_events:
   path: /events

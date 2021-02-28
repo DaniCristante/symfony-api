@@ -10,7 +10,7 @@ use Faker\Factory;
 class EventFixtures extends Fixture
 {
 
-    public function load(ObjectManager $manager)
+    public function load(ObjectManager $manager): void
     {
         $faker = Factory::create('es_ES');
 

@@ -13,7 +13,7 @@ class EventRepository extends ServiceEntityRepository
         parent::__construct($registry, Event::class);
     }
 
-    public function getEventById($id): array
+    public function getEventById(int $id): array
     {
         $qb = $this->createQueryBuilder('event')
             ->where('event.id = :id')
