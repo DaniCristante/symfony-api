@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -54,12 +53,6 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $phone;
-
-    private $encoder;
-
-    public function __construct(UserPasswordEncoderInterface $encoder) {
-        $this->encoder = $encoder;
-    }
 
     public function getId(): ?int
     {
@@ -117,7 +110,6 @@ class User implements UserInterface
 
     public function setPassword(string $password): self
     {
-        $password = $this->encoder->encodePassword($password);
         $this->password = $password;
 
         return $this;
