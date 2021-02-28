@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "fzaninotto/faker": "^1.9",
-        "phpstan/phpstan": "^0.12.79"
+        "phpstan/phpstan": "^0.12.79",
+        "vimeo/psalm": "^4.6"
     },
     "config": {
         "optimize-autoloader": true,
