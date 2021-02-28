@@ -25,3 +25,4 @@ services:
             MYSQL_PASSWORD: symfony
         ports:
             - "3333:3306"
+        command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']

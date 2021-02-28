@@ -22,7 +22,7 @@ class UserFixtures extends Fixture
     public function load (ObjectManager $manager): void
     {
         $faker = Factory::create('es_ES');
-        // $this->createAdminUser($manager);
+        $this->createAdminUser($manager);
 
         for ($i = 1; $i < self::MAX_DUMMY_USERS; $i++){
             $this->createUser($manager, $faker);
@@ -46,9 +46,9 @@ class UserFixtures extends Fixture
         $nicknameBasedOnName = (\strtolower($nameParts[0]) . '-' . \strtolower($nameParts[1]));
 
         $user = new User();
-        $user->setName($faker->name);
+        $user->setName($name);
         $user->setSurnames($surname);
-        $user->setEmail($emailBasedOnName . '@gmail.com');
+        $user->setEmail($emailBasedOnName);
         $user->setPassword($this->encoder->encodePassword($user, self::DEFAULT_PASSWORD));
         $user->setNickname($nicknameBasedOnName);
         $manager->persist($user);
