@@ -24,6 +24,6 @@ class EventController extends AbstractController
 
     public function getEvents(): Response
     {
-        
+        return $this->json('hola');
     }
 }

@@ -93,6 +93,9 @@
     "doctrine/sql-formatter": {
         "version": "1.1.1"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.3"
+    },
     "fzaninotto/faker": {
         "version": "v1.9.1"
     },
@@ -113,6 +116,9 @@
     },
     "php": {
         "version": "7.4"
+    },
+    "phpstan/phpstan": {
+        "version": "0.12.78"
     },
     "psr/cache": {
         "version": "1.0.1"
